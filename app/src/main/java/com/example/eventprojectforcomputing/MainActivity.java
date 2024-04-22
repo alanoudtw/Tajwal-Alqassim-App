@@ -1,16 +1,16 @@
 package com.example.eventprojectforcomputing;
 
-import androidx.appcompat.app.AppCompatActivity;
+import static com.example.eventprojectforcomputing.R.layout;
 
 import android.os.Bundle;
 
-import com.example.project.R;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(layout.activity_main);
     }
 }
