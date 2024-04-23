@@ -3,6 +3,7 @@ package com.example.eventprojectforcomputing;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.orhanobut.dialogplus.DialogPlus;
+import com.orhanobut.dialogplus.ViewHolder;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -40,6 +43,17 @@ public class MainAdapterLayan1 extends FirebaseRecyclerAdapter<MainModelLayan1,M
                 .error(com.google.firebase.database.collection.R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.img);
 
+        holder.btnEdit1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final DialogPlus dialogPlus1 = DialogPlus.newDialog(holder.img.getContext())
+                        .setContentHolder(new ViewHolder(R.layout.update_popup1))
+                        .setExpanded(true,1200)
+                        .create();
+
+            }
+        });
+
     }
 
     @NonNull
@@ -54,6 +68,8 @@ public class MainAdapterLayan1 extends FirebaseRecyclerAdapter<MainModelLayan1,M
         CircleImageView img;
         TextView eventname,available,evaluation,location;
 
+        Button btnEdit1, btnDelete1;
+
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -63,6 +79,9 @@ public class MainAdapterLayan1 extends FirebaseRecyclerAdapter<MainModelLayan1,M
             available = (TextView) itemView.findViewById(R.id.availablesport);
             evaluation = (TextView) itemView.findViewById(R.id.evaluationsport);
             location = (TextView) itemView.findViewById(R.id.locationsport);
+
+            btnEdit1 = (Button) itemView.findViewById(R.id.btnedit1);
+            btnDelete1 = (Button) itemView.findViewById(R.id.btndelete1);
 
 
 

@@ -80,7 +80,7 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/btnEdit1"
+                android:id="@+id/btnedit1"
                 android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
@@ -89,7 +89,7 @@
                 android:background="@drawable/rounded1"/>
 
             <Button
-                android:id="@+id/btnDelete1"
+                android:id="@+id/btndelete1"
                 android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btnEdit1"
