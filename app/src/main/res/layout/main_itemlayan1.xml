@@ -92,7 +92,7 @@
                 android:id="@+id/btndelete1"
                 android:layout_width="90dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/btnEdit1"
+                android:layout_below="@id/btnedit1"
                 android:text="Delete"
                 android:background="@drawable/rounded1"
                 android:textAllCaps="false" />

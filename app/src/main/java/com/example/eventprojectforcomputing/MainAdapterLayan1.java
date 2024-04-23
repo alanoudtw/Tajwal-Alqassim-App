@@ -48,8 +48,10 @@ public class MainAdapterLayan1 extends FirebaseRecyclerAdapter<MainModelLayan1,M
             public void onClick(View v) {
                 final DialogPlus dialogPlus1 = DialogPlus.newDialog(holder.img.getContext())
                         .setContentHolder(new ViewHolder(R.layout.update_popup1))
-                        .setExpanded(true,1200)
+                        .setExpanded(true,1800)
                         .create();
+
+                dialogPlus1.show();
 
             }
         });
