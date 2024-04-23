@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="382dp"
+        android:padding="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img3"
+            android:layout_width="164dp"
+            android:layout_height="202dp"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/eventnamehorse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img3"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="5dp"
+            android:text="event name"
+            android:textColor="	#C4A484"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/availablehorse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/eventnamehorse"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="5dp"
+            android:text="available"
+            android:textColor="	#C4A484"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/evaluationhorse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/availablehorse"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="5dp"
+            android:text="evaluation"
+            android:textColor="	#C4A484"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/locationhorse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/evaluationhorse"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="5dp"
+            android:text="location"
+            android:textColor="	#C4A484"
+            android:textSize="25sp" />
+
+
+    </RelativeLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>
