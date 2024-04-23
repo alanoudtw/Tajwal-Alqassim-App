@@ -108,8 +108,9 @@
         android:layout_marginTop="10dp"
         android:textSize="21dp"
         android:text="Update"
+        android:textColor="#FFFF"
         android:textAllCaps="false"
-        android:background="@drawable/rounded1"
+        android:background="@drawable/colorbuttonforeditanddelete1"
         android:gravity="center"
         android:id="@+id/btnupdate1"
         />

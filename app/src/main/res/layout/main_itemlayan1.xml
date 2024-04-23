@@ -85,7 +85,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
                 android:text="Edit"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:background="@drawable/rounded1"/>
 
             <Button
                 android:id="@+id/btnDelete1"
@@ -93,6 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btnEdit1"
                 android:text="Delete"
+                android:background="@drawable/rounded1"
                 android:textAllCaps="false" />
 
         </RelativeLayout>
