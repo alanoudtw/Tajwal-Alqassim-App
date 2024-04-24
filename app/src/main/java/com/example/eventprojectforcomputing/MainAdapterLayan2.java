@@ -118,25 +118,25 @@ public class MainAdapterLayan2 extends FirebaseRecyclerAdapter<MainModelLayan1,M
         holder.btnDelete2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder1 = new AlertDialog.Builder(holder.eventname.getContext());
-                builder1.setTitle("Are you sure you want to delete ?");
-                builder1.setMessage("Deleted data can not be UNDO");
+                AlertDialog.Builder builder2 = new AlertDialog.Builder(holder.eventname.getContext());
+                builder2.setTitle("Are you sure you want to delete ?");
+                builder2.setMessage("Deleted data can not be UNDO");
 
-                builder1.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                builder2.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        FirebaseDatabase.getInstance().getReference().child("Sport")
+                        FirebaseDatabase.getInstance().getReference().child("Gym")
                                 .child(getRef(position).getKey()).removeValue();
                     }
                 });
 
-                builder1.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                builder2.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Toast.makeText(holder.eventname.getContext(), "Canceled", Toast.LENGTH_SHORT).show();
                     }
                 });
-                builder1.show();
+                builder2.show();
             }
         });
 
