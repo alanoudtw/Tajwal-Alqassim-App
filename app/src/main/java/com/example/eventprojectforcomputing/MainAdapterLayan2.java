@@ -98,14 +98,14 @@ public class MainAdapterLayan2 extends FirebaseRecyclerAdapter<MainModelLayan1,M
                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void unused) {
-                                        Toast.makeText(holder.eventname.getContext(), "Updated Successfully", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(holder.eventname.getContext(), "تم التحديث بنجاح", Toast.LENGTH_SHORT).show();
                                         dialogPlus2.dismiss();
                                     }
                                 })
                                 .addOnFailureListener(new OnFailureListener() {
                                     @Override
                                     public void onFailure(Exception e) {
-                                        Toast.makeText(holder.eventname.getContext(), "Oops, Updated Failed", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(holder.eventname.getContext(), "حصل خطأ خلال التحديث", Toast.LENGTH_SHORT).show();
                                         dialogPlus2.dismiss();
                                     }
                                 });
@@ -119,8 +119,8 @@ public class MainAdapterLayan2 extends FirebaseRecyclerAdapter<MainModelLayan1,M
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder2 = new AlertDialog.Builder(holder.eventname.getContext());
-                builder2.setTitle("Are you sure you want to delete ?");
-                builder2.setMessage("Deleted data can not be UNDO");
+                builder2.setTitle("هل أنت متأكد من الحذف؟");
+                builder2.setMessage("لايمكن التراجع عن الحذف");
 
                 builder2.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                     @Override
