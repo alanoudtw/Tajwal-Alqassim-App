@@ -15,6 +15,9 @@
         android:theme="@style/Theme.EventProjectForComputing"
         tools:targetApi="31">
         <activity
+            android:name=".AddActivity1"
+            android:exported="false" />
+        <activity
             android:name=".recycleactivityforlayan3"
             android:exported="false" />
         <activity
