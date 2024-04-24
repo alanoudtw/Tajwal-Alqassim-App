@@ -57,14 +57,14 @@ public class MainAdapterLayan2 extends FirebaseRecyclerAdapter<MainModelLayan1,M
         holder.btnEdit2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final DialogPlus dialogPlus1 = DialogPlus.newDialog(holder.img.getContext())
+                final DialogPlus dialogPlus2 = DialogPlus.newDialog(holder.img.getContext())
                         .setContentHolder(new ViewHolder(R.layout.update_popup1))
                         .setExpanded(true,1800)
                         .create();
 
                 //dialogPlus1.show();
 
-                View view = dialogPlus1.getHolderView();
+                View view = dialogPlus2.getHolderView();
 
                 EditText eventname2 = view.findViewById(R.id.txteventname1);
                 EditText available2 = view.findViewById(R.id.txtavailable1);
@@ -81,7 +81,7 @@ public class MainAdapterLayan2 extends FirebaseRecyclerAdapter<MainModelLayan1,M
                 location2.setText(model.getLocation());
                 pictureurl2.setText(model.getPicture());
 
-                dialogPlus1.show();
+                dialogPlus2.show();
 
                 btnUpdate.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -99,14 +99,14 @@ public class MainAdapterLayan2 extends FirebaseRecyclerAdapter<MainModelLayan1,M
                                     @Override
                                     public void onSuccess(Void unused) {
                                         Toast.makeText(holder.eventname.getContext(), "Updated Successfully", Toast.LENGTH_SHORT).show();
-                                        dialogPlus1.dismiss();
+                                        dialogPlus2.dismiss();
                                     }
                                 })
                                 .addOnFailureListener(new OnFailureListener() {
                                     @Override
                                     public void onFailure(Exception e) {
                                         Toast.makeText(holder.eventname.getContext(), "Oops, Updated Failed", Toast.LENGTH_SHORT).show();
-                                        dialogPlus1.dismiss();
+                                        dialogPlus2.dismiss();
                                     }
                                 });
                     }
