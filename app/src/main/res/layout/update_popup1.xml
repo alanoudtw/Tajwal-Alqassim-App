@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Update Details"
+        android:text="تحديث البيانات"
         android:background="#C4A484"
         android:textSize="25dp"
         android:gravity="center"
@@ -21,7 +21,7 @@
         android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Event Name"/>
+        android:text="اسم الايفنت"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -38,7 +38,7 @@
         android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Evaluation"/>
+        android:text="التقييم"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -55,7 +55,7 @@
         android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Available Period"/>
+        android:text="الفترة المتاحة"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -72,7 +72,7 @@
         android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Location"/>
+        android:text="المكان"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -89,7 +89,7 @@
         android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Picture URL"/>
+        android:text="رابط الصورة"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -107,7 +107,7 @@
         android:layout_marginRight="25dp"
         android:layout_marginTop="10dp"
         android:textSize="21dp"
-        android:text="Update"
+        android:text="تحديث"
         android:textColor="#FFFF"
         android:textAllCaps="false"
         android:background="@drawable/colorbuttonforeditanddelete1"
