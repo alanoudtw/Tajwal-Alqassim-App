@@ -121,7 +121,7 @@ public class MainAdapterLayan1 extends FirebaseRecyclerAdapter<MainModelLayan1,M
                 builder1.setTitle("هل أنت متأكد من الحذف؟");
                 builder1.setMessage("لايمكن التراجع عن الحذف");
 
-                builder1.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                builder1.setPositiveButton("تم الحذف", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         FirebaseDatabase.getInstance().getReference().child("Sport")
@@ -129,10 +129,10 @@ public class MainAdapterLayan1 extends FirebaseRecyclerAdapter<MainModelLayan1,M
                     }
                 });
 
-                builder1.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                builder1.setNegativeButton("إلغاء", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(holder.eventname.getContext(), "Canceled", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(holder.eventname.getContext(), "تم الإلغاء", Toast.LENGTH_SHORT).show();
                     }
                 });
                 builder1.show();

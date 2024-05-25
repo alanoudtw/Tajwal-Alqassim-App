@@ -15,6 +15,29 @@
         android:theme="@style/Theme.EventProjectForComputing"
         tools:targetApi="31">
         <activity
+            android:name=".login"
+            android:exported="false" />
+        <activity
+            android:name=".Signup"
+            android:exported="false" />
+        <activity
+            android:name=".welcome"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home1"
+            android:exported="false"
+            android:label="@string/title_activity_home1"
+            android:theme="@style/Theme.EventProjectForComputing" />
+        <activity
+            android:name=".AddActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".AddActivity2"
+            android:exported="false" />
+        <activity
             android:name=".AddActivity1"
             android:exported="false" />
         <activity
@@ -27,7 +50,7 @@
             android:name=".recycleactivityforlayan1"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,9 +58,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".splash"
-            android:exported="false" />
     </application>
 
 </manifest>
