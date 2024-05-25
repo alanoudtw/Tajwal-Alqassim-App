@@ -58,21 +58,21 @@ public class MainAdapterLayan2 extends FirebaseRecyclerAdapter<MainModelLayan1,M
             @Override
             public void onClick(View v) {
                 final DialogPlus dialogPlus2 = DialogPlus.newDialog(holder.img.getContext())
-                        .setContentHolder(new ViewHolder(R.layout.update_popup1))
+                        .setContentHolder(new ViewHolder(R.layout.update_popup2))
                         .setExpanded(true,1800)
                         .create();
 
-                //dialogPlus1.show();
+//                dialogPlus2.show();
 
-                View view = dialogPlus2.getHolderView();
+               View view = dialogPlus2.getHolderView();
 
-                EditText eventname2 = view.findViewById(R.id.txteventname1);
-                EditText available2 = view.findViewById(R.id.txtavailable1);
-                EditText evaluation2 = view.findViewById(R.id.txtevaluation1);
-                EditText location2 = view.findViewById(R.id.txtlocation1);
-                EditText pictureurl2 = view.findViewById(R.id.txtpictureurl1);
+                EditText eventname2 = view.findViewById(R.id.txteventname2);
+                EditText available2 = view.findViewById(R.id.txtavailable2);
+                EditText evaluation2 = view.findViewById(R.id.txtevaluation2);
+                EditText location2 = view.findViewById(R.id.txtlocation2);
+                EditText pictureurl2 = view.findViewById(R.id.txtpictureurl2);
 
-                Button btnUpdate = view.findViewById(R.id.btnupdate1);
+                Button btnUpdate = view.findViewById(R.id.btnupdate2);
 
 
                 eventname2.setText(model.getEventname());
@@ -86,15 +86,18 @@ public class MainAdapterLayan2 extends FirebaseRecyclerAdapter<MainModelLayan1,M
                 btnUpdate.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Map<String,Object> map = new HashMap<>();
-                        map.put("available",available2.getText().toString());
-                        map.put("evaluation",evaluation2.getText().toString());
-                        map.put("eventname",eventname2.getText().toString());
-                        map.put("location",location2.getText().toString());
-                        map.put("picture",pictureurl2.getText().toString());
+                        Map<String, Object> map = new HashMap<>();
+                        map.put("available", available2.getText().toString());
+                        map.put("evaluation", evaluation2.getText().toString());
+                        map.put("eventname", eventname2.getText().toString());
+                        map.put("location", location2.getText().toString());
+                        map.put("picture", pictureurl2.getText().toString());
+
+                        String itemKey = getRef(position).getKey(); // Get the key of the item being edited
 
                         FirebaseDatabase.getInstance().getReference().child("Gym")
-                                .child(getRef(position).getKey()).updateChildren(map)
+                                .child(itemKey) // Use the correct child node based on the item key
+                                .updateChildren(map)
                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void unused) {
@@ -122,7 +125,7 @@ public class MainAdapterLayan2 extends FirebaseRecyclerAdapter<MainModelLayan1,M
                 builder2.setTitle("هل أنت متأكد من الحذف؟");
                 builder2.setMessage("لايمكن التراجع عن الحذف");
 
-                builder2.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                builder2.setPositiveButton("تم الحذف", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         FirebaseDatabase.getInstance().getReference().child("Gym")
@@ -130,10 +133,10 @@ public class MainAdapterLayan2 extends FirebaseRecyclerAdapter<MainModelLayan1,M
                     }
                 });
 
-                builder2.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                builder2.setNegativeButton("ألغاء", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(holder.eventname.getContext(), "Canceled", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(holder.eventname.getContext(), "تم الإلغاء", Toast.LENGTH_SHORT).show();
                     }
                 });
                 builder2.show();
@@ -166,8 +169,8 @@ public class MainAdapterLayan2 extends FirebaseRecyclerAdapter<MainModelLayan1,M
             evaluation = (TextView) itemView.findViewById(R.id.evaluationgym);
             location = (TextView) itemView.findViewById(R.id.locationgym);
 
-            btnEdit2 = (Button) itemView.findViewById(R.id.btnedit1);
-            btnDelete2 = (Button) itemView.findViewById(R.id.btndelete1);
+            btnEdit2 = (Button) itemView.findViewById(R.id.btnedit2);
+            btnDelete2 = (Button) itemView.findViewById(R.id.btndelete2);
         }
     }
 }

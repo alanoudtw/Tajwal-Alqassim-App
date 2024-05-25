@@ -3,6 +3,7 @@ package com.example.eventprojectforcomputing;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -46,8 +47,7 @@ public class AddActivity1 extends AppCompatActivity {
         btnback1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
-            }
+                startActivity(new Intent(getApplicationContext(),MainAdapterLayan1.class)); }
         });
     }
 
@@ -64,13 +64,13 @@ public class AddActivity1 extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
-                        Toast.makeText(AddActivity1.this,"Data Inserted Successfully",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AddActivity1.this,"تم إضافة البيانات بنجاح",Toast.LENGTH_SHORT).show();
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(Exception e) {
-                        Toast.makeText(AddActivity1.this,"Error while insertion",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AddActivity1.this,"مشكلة أثناء الأضافة",Toast.LENGTH_SHORT).show();
                     }
                 });
     }

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "94671022922",
+    "firebase_url": "https://computingprojectmadebylayandb-default-rtdb.firebaseio.com",
+    "project_id": "computingprojectmadebylayandb",
+    "storage_bucket": "computingprojectmadebylayandb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94671022922:android:df2062c64e400e5e742fb3",
+        "android_client_info": {
+          "package_name": "com.example.eventprojectforcomputing"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzcndxQ-oDuug4KnTmuwHO-pZQPthf0eE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
