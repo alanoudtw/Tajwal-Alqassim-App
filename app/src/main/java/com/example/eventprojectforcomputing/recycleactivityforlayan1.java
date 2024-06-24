@@ -87,7 +87,7 @@ public class recycleactivityforlayan1 extends AppCompatActivity implements Navig
 
     public void signOut() {
         FirebaseAuth.getInstance().signOut();
-        Intent i = new Intent(this,login.class);
+        Intent i = new Intent(String.valueOf(this));
         startActivity(i);
         finish();
     }

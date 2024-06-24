@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
             Home();
             return true;
         } else if (itemId == R.id.signout_bottom) {
-            signOut();
+//            signOut();
             return true;
         }
 
@@ -62,10 +62,10 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
         finish();
     }
 
-    public void signOut() {
-        FirebaseAuth.getInstance().signOut();
-        Intent i = new Intent(MainActivity.this,login.class);
-        startActivity(i);
-        finish();
-    }
+//    public void signOut() {
+//        FirebaseAuth.getInstance().signOut();
+//        Intent i = new Intent(String.valueOf(MainActivity.this));
+//        startActivity(i);
+//        finish();
+//    }
 }

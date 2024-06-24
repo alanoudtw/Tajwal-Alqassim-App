@@ -1,7 +1,8 @@
 plugins {
+    id("org.jetbrains.kotlin.android")
     id("com.android.application")
     id("com.google.gms.google-services")
-    id("org.jetbrains.kotlin.android")
+
 }
 
 android {
@@ -78,6 +79,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
     implementation("com.google.firebase:firebase-auth:22.3.1")
+    implementation(platform("com.google.firebase:firebase-bom:33.1.0"))
 
 
     testImplementation("junit:junit:4.13.2")
@@ -88,6 +90,9 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
+
 }
 apply (plugin = "com.google.gms.google-services")
 apply (plugin = "com.android.application")
+apply (plugin = "com.google.gms.google-services")
+
